@@ -6,7 +6,7 @@ import { MaterialIcons } from '@expo/vector-icons';
 
 const Profile = (props) => {
     const { _id, roadNumber, roadName, fromChainage, toChainage, roadLength, from, to, pci, location, numImage, imageUrls, damageImageUrls, timeCreated, timeModified} = props.route.params.item;
-    const ngrok_url = "http://9653ee5e2f2e.ngrok.io";
+    const ngrok_url = "http://0c82f116a088.ngrok.io";
     const deleteRoad = () => {
         fetch(`${ngrok_url}/delete`, {
             method:"POST",
@@ -66,6 +66,7 @@ const Profile = (props) => {
                     <Text style={styles.myText}>Number of Images: {numImage}</Text>
                 </View>
             </Card>
+
             <Card style={styles.myCard} onPress={()=>{
                 console.log(imageUrls)
                 props.navigation.navigate("ViewImage", {imageUrls})}}>
@@ -73,6 +74,7 @@ const Profile = (props) => {
                     <Text style={styles.myText}>Images Uploaded</Text>
                 </View>
             </Card>
+
             <Card style={styles.myCard} onPress={()=>{
                 console.log(damageImageUrls)
                 for(var index = 0; index < damageImageUrls.length; index++){
@@ -86,14 +88,18 @@ const Profile = (props) => {
                 </View>
             </Card>
             <View style={{flexDirection: 'row', justifyContent:'space-around', padding:10}}>
-                <Button theme={theme} style={styles.inputStyle } icon="pencil" mode="contained" 
+                <Button theme={theme} style={styles.inputStyle } 
+                icon="pencil" 
+                mode="contained" 
                 onPress={() => {
                     props.navigation.navigate("Create", { _id, roadNumber, roadName, fromChainage, toChainage, roadLength, from, to, pci, location, numImage, imageUrls, damageImageUrls, timeCreated, timeModified })
                     }}
                 >
                     Edit
                 </Button>
-                <Button theme={theme} style={styles.inputStyle } icon="delete" mode="contained" onPress={() => deleteRoad()}>
+                <Button theme={theme} style={styles.inputStyle } 
+                icon="delete" 
+                mode="contained" onPress={() => deleteRoad()}>
                     Delete
                 </Button>
             </View>

@@ -18,6 +18,7 @@ const myOptions = {
 }
 
 function App() {
+  
   return (
       <View
         style={styles.container}

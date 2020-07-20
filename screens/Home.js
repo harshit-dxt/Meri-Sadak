@@ -1,3 +1,4 @@
+
 import React, { useContext , useEffect} from 'react';
 import { StyleSheet, Text, View, Image, FlatList, Alert} from 'react-native';
 import { Card, FAB} from 'react-native-paper';
@@ -11,7 +12,7 @@ const Home = ({navigation}) => {
         fetchData()
     }, [])
 
-    const ngrok_url = "http://9653ee5e2f2e.ngrok.io"
+    const ngrok_url = "http://0c82f116a088.ngrok.io"
 
     const fetchData = () => {
         fetch(`${ngrok_url}`)
