@@ -2,11 +2,11 @@ import React from 'react';
 import { StyleSheet, Text, View, Image, Platform, Alert } from 'react-native';
 import { Title, Card, Button } from 'react-native-paper';
 import { LinearGradient } from 'expo-linear-gradient';
-import { MaterialIcons } from '@expo/vector-icons';
+// import { MaterialIcons } from '@expo/vector-icons';
 
 const Profile = (props) => {
     const { _id, roadNumber, roadName, fromChainage, toChainage, roadLength, from, to, pci, location, numImage, imageUrls, damageImageUrls, timeCreated, timeModified} = props.route.params.item;
-    const ngrok_url = "http://0c82f116a088.ngrok.io";
+    const ngrok_url = "http://19b2a2951b40.ngrok.io";
     const deleteRoad = () => {
         fetch(`${ngrok_url}/delete`, {
             method:"POST",
@@ -89,7 +89,7 @@ const Profile = (props) => {
             </Card>
             <View style={{flexDirection: 'row', justifyContent:'space-around', padding:10}}>
                 <Button theme={theme} style={styles.inputStyle } 
-                icon="pencil" 
+                // icon="pencil" 
                 mode="contained" 
                 onPress={() => {
                     props.navigation.navigate("Create", { _id, roadNumber, roadName, fromChainage, toChainage, roadLength, from, to, pci, location, numImage, imageUrls, damageImageUrls, timeCreated, timeModified })
@@ -98,7 +98,7 @@ const Profile = (props) => {
                     Edit
                 </Button>
                 <Button theme={theme} style={styles.inputStyle } 
-                icon="delete" 
+                // icon="delete" 
                 mode="contained" onPress={() => deleteRoad()}>
                     Delete
                 </Button>

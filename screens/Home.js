@@ -1,7 +1,7 @@
 
 import React, { useContext , useEffect} from 'react';
 import { StyleSheet, Text, View, Image, FlatList, Alert} from 'react-native';
-import { Card, FAB} from 'react-native-paper';
+import { Card, FAB, Button, Title} from 'react-native-paper';
 import {myContext} from '../reducers/reducer';
 
 const Home = ({navigation}) => {
@@ -12,7 +12,7 @@ const Home = ({navigation}) => {
         fetchData()
     }, [])
 
-    const ngrok_url = "http://0c82f116a088.ngrok.io"
+    const ngrok_url = "http://19b2a2951b40.ngrok.io"
 
     const fetchData = () => {
         fetch(`${ngrok_url}`)
@@ -64,15 +64,21 @@ const Home = ({navigation}) => {
               refreshing={loading}
               onRefresh={() => fetchData()}
             />
-            <FAB
-              onPress={() => navigation.navigate("Create")}
-              style={styles.fab}
-              small={false}
-              theme="light"
-              icon="plus"
-            />
+            <Button theme={theme} style={styles.Button} small={false}
+                            // icon="camera" 
+
+                            mode="contained" onPress={() => navigation.navigate("Create")}>
+                                Upload
+            </Button>
         </View>
     );
+}
+
+
+const theme = {
+    colors:{
+        primary: "#000",
+    }
 }
 
 const styles = StyleSheet.create({
@@ -102,6 +108,13 @@ const styles = StyleSheet.create({
         margin: 25,
         right: 0,
         bottom: 0,
+        backgroundColor: "#000"
+    },
+    Button:{
+        position: 'relative',
+        margin: 25,
+        right:0,
+        left:0,
         backgroundColor: "#000"
     }
 })

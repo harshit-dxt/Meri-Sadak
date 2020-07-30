@@ -10,7 +10,7 @@ const RoadDetails = ({navigation, route}) => {
     const [modal, setModal] = useState(false);
     const [enableShift, setEnableShift] = useState(false);
     
-    const ngrok_url = "http://0c82f116a088.ngrok.io"
+    const ngrok_url = "http://19b2a2951b40.ngrok.io"
     const flask_url = "http://632a0311e4c4.ngrok.io/predict"
     const getDetails = (type) => {
         if(route.params){
@@ -307,14 +307,14 @@ const RoadDetails = ({navigation, route}) => {
                     />
                     
                     <Button theme={theme} style={styles.inputStyle } 
-                    icon= "upload"
+                    // icon= "upload"
                     mode="contained" onPress={() => setModal(true)}>
                         Upload Image
                     </Button>
                     {
                         route.params?
                         <Button theme={theme} style={styles.inputStyle } 
-                        icon="content-save" 
+                        // icon="content-save" 
                         mode="contained" onPress={() => {
                         updateDetails()
                         Alert.alert("Road Details updated");
@@ -324,7 +324,7 @@ const RoadDetails = ({navigation, route}) => {
                         </Button> 
                         :
                     <Button theme={theme} style={styles.inputStyle } 
-                    icon="content-save" 
+                    // icon="content-save" 
                     mode="contained" onPress={() => {
                     submitData( );
                     Alert.alert("Road Details Added");
@@ -342,7 +342,7 @@ const RoadDetails = ({navigation, route}) => {
                     <View style={styles.modalView}>
                         <View style={styles.modalButtonView}>
                             <Button theme={theme} style={{width: "80%"}}
-                            icon="camera" 
+                            // icon="camera" 
                             mode="contained" onPress={() => {
                                 console.log("Camera Pressed")
                                 return pickFromCamera();
@@ -351,7 +351,7 @@ const RoadDetails = ({navigation, route}) => {
                             </Button>
                         </View>
                         <Button theme={theme} 
-                        icon="close-circle" 
+                        // icon="close-circle" 
                         onPress={() => setModal(false)}>
                             Cancel
                         </Button>
