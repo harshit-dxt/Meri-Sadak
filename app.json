@@ -6,9 +6,9 @@
     "orientation": "portrait",
     "icon": "./assets/pmgsy-logo.png",
     "splash": {
-      // "image": "./assets/splash.png",
+      "image": "./assets/PATH.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#ff5757"
     },
     "updates": {
       "fallbackToCacheTimeout": 0

@@ -12,7 +12,7 @@ const Home = ({navigation}) => {
         fetchData()
     }, [])
 
-    const ngrok_url = "http://19b2a2951b40.ngrok.io"
+    const ngrok_url = "http://6a18323803af.ngrok.io"
 
     const fetchData = () => {
         fetch(`${ngrok_url}`)

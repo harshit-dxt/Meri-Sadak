@@ -6,7 +6,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 
 const Profile = (props) => {
     const { _id, roadNumber, roadName, fromChainage, toChainage, roadLength, from, to, pci, location, numImage, imageUrls, damageImageUrls, timeCreated, timeModified} = props.route.params.item;
-    const ngrok_url = "http://19b2a2951b40.ngrok.io";
+    const ngrok_url = "http://6a18323803af.ngrok.io";
     const deleteRoad = () => {
         fetch(`${ngrok_url}/delete`, {
             method:"POST",
