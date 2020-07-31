@@ -68,7 +68,7 @@ const Home = ({navigation}) => {
                             // icon="camera" 
 
                             mode="contained" onPress={() => navigation.navigate("Create")}>
-                                Upload
+                                Add Road Details
             </Button>
         </View>
     );

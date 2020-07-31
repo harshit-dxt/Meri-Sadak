@@ -8,4 +8,4 @@
 7. Open a new terminal and `npm install -g ngrok` then `ngrok http 3000`
 8. Copy the http url from ngrok output to the app wherever needed.(in Home.js, Profile.js, RoadDetails.js)
 9. Rest of the errors may be due to version, therefore try to debug using web.
-10. To test the model, also see PCI-detector repository and learn from there how to use flask_server.
+10. To test the model, also see [PCI-detector repository](https://github.com/AnugunjNaman/PCI-Detector) and learn from there how to use flask_server.
