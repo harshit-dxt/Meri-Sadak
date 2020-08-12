@@ -8,7 +8,7 @@ app.use(bodyParser.json());
 
 const Road = mongoose.model("road");
 
-const mongoUri = "mongodb+srv://admin:4WrLk4ZLe3Y2OuHN@cluster0.sv1un.mongodb.net/<dbname>?retryWrites=true&w=majority"
+const mongoUri = "mongodb+srv://admin:password@cluster0.sv1un.mongodb.net/<dbname>?retryWrites=true&w=majority"
 
 mongoose.connect(mongoUri,{
     useNewUrlParser:true,
